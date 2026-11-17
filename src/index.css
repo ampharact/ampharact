@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Quicksand', 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a2e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.gradient-light {
+  background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 50%, #f5f9ff 100%);
+}
