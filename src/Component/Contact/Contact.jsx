@@ -1,72 +1,77 @@
 import React from 'react';
 import SEO from '../SEO';
-import { PageHero, SectionWrapper } from '../ui';
 import Footer from '../Home/Footer';
 import { contactSteps, processGuarantees, socialLinks, companyInfo } from '../../Content/content';
 
-const socialButtons = [
-  { key: 'linkedin', label: 'LinkedIn', color: 'text-blue-700' },
-  { key: 'instagram', label: 'Instagram', color: 'text-pink-600' },
-  { key: 'youtube', label: 'YouTube', color: 'text-red-600' },
-];
-
 const Contact = () => (
   <>
-    <SEO title="Contact Us" description="Get in touch with Ampharact. Write us about your project and we'll prepare a proposal within 24 hours." keywords="contact Ampharact, IT services inquiry, managed services quote" />
+    <SEO title="Contact Us" description="Get in touch with Ampharact. We respond within 24 hours." keywords="contact Ampharact, IT services, managed services" />
 
-    <PageHero title="Let's Talk" subtitle="You can reach us any time" gradient="bg-gradient-to-br from-blue-600 to-indigo-700" dark={false} />
+    <section className="bg-gray-900 py-20 px-6">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight">Let's talk</h1>
+        <p className="text-lg text-gray-400 mt-4">We respond within 24 hours.</p>
+      </div>
+    </section>
 
-    <SectionWrapper>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-        {/* Process Steps */}
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">What will be the next step?</h2>
-          <p className="text-gray-500 mb-10">You are one step closer to building your perfect product.</p>
-          <div className="space-y-10 relative pl-8 before:absolute before:left-3 before:top-2 before:h-[80%] before:w-0.5 before:bg-blue-200">
-            {contactSteps.map((step, index) => (
-              <div key={index} className="relative">
-                <div className="absolute -left-[22px] top-1 w-4 h-4 bg-white border-2 border-blue-500 rounded-full flex items-center justify-center">
-                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+    <section className="bg-white py-24 px-6">
+      <div className="max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Process */}
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-8">How it works</h2>
+            <div className="space-y-8">
+              {contactSteps.map((step, i) => (
+                <div key={i} className="flex gap-4">
+                  <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-white text-xs font-bold">{step.number}</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1">{step.title}</h3>
+                    <p className="text-sm text-gray-500">{step.desc}</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h3>
-                <p className="text-gray-500">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Contact Info Card */}
-        <div>
-          <div className="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden">
-            <div className="bg-blue-50 p-6">
-              <p className="text-gray-700">Write us a few words about your project and we'll prepare a proposal for you within <strong>24 hours.</strong></p>
+              ))}
             </div>
-            <div className="p-8 space-y-6">
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6">
-                <h3 className="font-bold text-gray-900 mb-3">📧 Email Us</h3>
-                <a href={`mailto:${companyInfo.email}`} className="text-blue-600 font-semibold text-lg hover:underline">{companyInfo.email}</a>
+          </div>
+
+          {/* Contact info */}
+          <div className="space-y-6">
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-900 mb-2">Email us</h3>
+              <a href={`mailto:${companyInfo.email}`} className="text-blue-600 font-semibold hover:underline">{companyInfo.email}</a>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-900 mb-3">Connect</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { key: 'linkedin', label: 'LinkedIn' },
+                  { key: 'instagram', label: 'Instagram' },
+                  { key: 'youtube', label: 'YouTube' },
+                ].filter(s => socialLinks[s.key]).map(s => (
+                  <a key={s.key} href={socialLinks[s.key]} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 bg-white px-4 py-2 rounded-lg border border-gray-200 hover:border-blue-200 hover:text-blue-600 transition-colors">
+                    {s.label}
+                  </a>
+                ))}
               </div>
-              <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6">
-                <h3 className="font-bold text-gray-900 mb-3">🔗 Connect With Us</h3>
-                <div className="flex flex-wrap gap-3">
-                  {socialButtons.filter(s => socialLinks[s.key]).map(s => (
-                    <a key={s.key} href={socialLinks[s.key]} target="_blank" rel="noopener noreferrer" className={`px-4 py-2 bg-white rounded-lg text-sm font-medium ${s.color} shadow-sm hover:shadow-md transition-all`}>{s.label}</a>
-                  ))}
-                </div>
-              </div>
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6">
-                <h3 className="font-bold text-gray-900 mb-3">🏢 About Our Process</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  {processGuarantees.map((g, i) => (
-                    <li key={i} className="flex items-center space-x-2"><span className="text-green-500">✓</span><span>{g}</span></li>
-                  ))}
-                </ul>
-              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-bold text-gray-900 mb-3">Our promise</h3>
+              <ul className="space-y-2">
+                {processGuarantees.map((g, i) => (
+                  <li key={i} className="flex items-center text-sm text-gray-500">
+                    <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2.5" />
+                    {g}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </SectionWrapper>
+    </section>
 
     <Footer />
   </>

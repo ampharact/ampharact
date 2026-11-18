@@ -1,140 +1,123 @@
 // ============================================================
-// CENTRALIZED CONTENT DATA — All page content lives here.
-// Edit this file to update text across the entire site.
+// CENTRALIZED CONTENT — Ampharact (I) Private Limited
+// Clean, concise corporate copy
 // ============================================================
 
-// ── Home: Services Section ──
+// ── Home: Services ──
 export const cardData = [
-  { icon: '☁️', title: 'Managed Cloud Services', content: 'Boost efficiency with secure, scalable cloud and AI infrastructure solutions.' },
-  { icon: '📦', title: 'Container Orchestration', content: 'Deploy containers effortlessly with our seamless orchestration services.' },
-  { icon: '🗄️', title: 'Data Warehousing', content: 'Our data warehousing service consolidates enterprise data for fast retrieval.' },
-  { icon: '🔗', title: 'MicroService Development', content: 'Build scalable, resilient applications with independent microservices.' },
-  { icon: '👥', title: 'Outsourcing Solutions', content: 'Skilled professionals to meet your needs efficiently and reduce costs.' },
-  { icon: '🛡️', title: 'Dedicated L1 Support', content: '24/7 L1 support ensures continuous, reliable assistance.' },
+  { icon: '☁️', title: 'Cloud Infrastructure', content: 'Multi-cloud architecture across AWS, Azure, and GCP with automated provisioning and FinOps governance.', link: '/services' },
+  { icon: '☸️', title: 'Kubernetes & Containers', content: 'Production-ready container orchestration with self-healing clusters and zero-downtime deployments.', link: '/services' },
+  { icon: '🗄️', title: 'Data Warehousing', content: 'Modern analytical data platforms on Snowflake, BigQuery, and Databricks with automated ETL pipelines.', link: '/services' },
+  { icon: '🧩', title: 'Microservices & APIs', content: 'Modernize monoliths into resilient microservice ecosystems with API gateways and service mesh.', link: '/services' },
+  { icon: '👥', title: 'Staff Augmentation', content: 'Scale your engineering teams with vetted cloud architects and DevOps specialists on demand.', link: '/services' },
+  { icon: '🛡️', title: '24/7 Operations Support', content: 'Round-the-clock monitoring, incident management, and sub-15-minute response times.', link: '/services' },
 ];
 
-// ── Home: Stats Strip ──
+// ── Home: Stats ──
 export const stats = [
-  { value: '360+', label: 'Data Backup RPO' },
-  { value: '100%', label: 'Secure Environment' },
-  { value: '24/7', label: 'Remote Monitoring' },
-  { value: '40%', label: 'Save Expenses' },
-  { value: '5+', label: 'Business Plans' },
-  { value: '99%', label: 'Service Uptime' },
+  { value: '99.99%', label: 'Uptime SLA' },
+  { value: '500+', label: 'Deployments' },
+  { value: '24/7', label: 'Support' },
+  { value: '50+', label: 'Clients' },
+  { value: '<15min', label: 'Response Time' },
+  { value: '3x', label: 'ROI' },
 ];
 
-// ── Home: Business Agility Features ──
-export const agilityFeatures = [
-  { icon: '🚀', title: 'Accelerate Productivity', content: 'Increase productivity with highly automated deployments and quick, error-free management.' },
-  { icon: '📦', title: 'Agile Container Orchestration', content: 'Empower production stability through flexible container management and service orchestration.' },
-  { icon: '🕐', title: 'Round-the-Clock Support', content: 'Continuous support for uninterrupted operations and enhanced customer satisfaction.' },
-];
-
-// ── Home: Industry Recognitions ──
-export const recognitions = [
-  { title: 'Startup India & TN Startup Registered', content: 'Ampharact, recognized by Startup India & Startup Tamil Nadu, drives growth through innovation.' },
-  { title: 'DPIIT Recognised', content: 'DPIIT supports Ampharact with tax benefits, driving investment and innovation.' },
-  { title: 'Azure Founders Hub', content: 'Azure Founders Hub recognition reflects our drive for innovation and business growth.' },
-];
-
-// ── Home: Products Preview ──
+// ── Home: Products ──
 export const homeProducts = [
   {
     tag: 'CaaS', title: 'AI-Powered Container Platform',
-    description: 'Experience the future of container management with CaaS, our fully managed GUI platform powered by AI. With advanced automation integration and easy monitoring, managing containers has never been smoother.',
+    description: 'Fully managed container orchestration with AI-driven automation, real-time monitoring, and one-click deployments.',
     gradient: 'from-blue-500 to-cyan-400',
+    features: ['AI-powered automation', 'Real-time dashboards', 'One-click deployments', 'Auto-scaling'],
   },
   {
-    tag: 'SaaS', title: 'Personalized AI for Your Enterprise',
-    description: 'Dedicated AI provides bespoke artificial intelligence solutions designed to meet the unique needs of your enterprise. We help you optimize operations, enhance decision-making, and drive innovation.',
+    tag: 'SaaS', title: 'Enterprise AI Solutions',
+    description: 'Custom AI models tailored to your business — optimize operations, enhance decisions, and drive innovation.',
     gradient: 'from-indigo-500 to-purple-400',
+    features: ['Custom AI models', 'Operations optimization', 'Predictive analytics', 'Seamless integration'],
   },
 ];
 
 // ── About: Core Values ──
 export const coreValues = [
-  { title: 'Trust', desc: 'Trust is the cornerstone of our business.' },
-  { title: 'Customer Centric', desc: 'Your success is our shared success.' },
-  { title: 'Quality', desc: 'We ensure the highest standards.' },
-  { title: 'Transparency', desc: 'Clear, open communication builds strong partnerships.' },
-  { title: 'Flexibility', desc: 'We adapt our solutions to evolving needs.' },
-  { title: 'Innovation', desc: 'We stay ahead of industry trends.' },
-  { title: 'On-Schedule', desc: 'We ensure prompt and timely delivery.' },
-  { title: 'Adaptability', desc: 'We evolve with your business needs.' },
+  { icon: '🤝', title: 'Trust', desc: 'Transparent partnerships built on reliability.' },
+  { icon: '🎯', title: 'Customer Focus', desc: 'Your success drives every decision we make.' },
+  { icon: '⭐', title: 'Quality', desc: 'Enterprise-grade standards in everything.' },
+  { icon: '💡', title: 'Innovation', desc: 'Staying ahead of industry trends.' },
+  { icon: '🔄', title: 'Adaptability', desc: 'Solutions that evolve with your business.' },
+  { icon: '⏱️', title: 'On-Schedule', desc: 'Prompt and reliable delivery, every time.' },
 ];
 
-// ── About: Security Items ──
+// ── About: Security ──
 export const securityItems = [
-  { title: 'Security & Compliance', desc: 'We understand the critical importance of safeguarding your data and ensuring compliance with industry regulations.' },
-  { title: 'Security Framework', desc: 'Our robust security framework protects your sensitive information, meeting GDPR and HIPAA standards.' },
-  { title: 'Advanced Protocols', desc: 'We implement advanced encryption, secure access controls, and regular audits to protect your business.' },
+  { icon: '🔒', title: 'Security & Compliance', desc: 'Comprehensive data protection meeting GDPR and HIPAA standards.' },
+  { icon: '🛡️', title: 'Security Framework', desc: 'Robust protocols with encryption, access controls, and regular audits.' },
+  { icon: '📋', title: 'Governance', desc: 'Continuous compliance monitoring with automated policy enforcement.' },
 ];
 
-// ── Services: Detail Cards ──
+// ── Services: Details ──
 export const serviceDetails = [
-  { title: 'Managed Cloud Service', desc: 'We handle the complexities of cloud management with detailed service offerings. Expertise in AWS, Azure, and GCP with 24/7 monitoring and support.' },
-  { title: 'Container Management', desc: 'Comprehensive container orchestration including Kubernetes and Docker support with automated deployments and scaling.' },
-  { title: 'Data Warehousing', desc: 'Detailed insights into architecture, scalability, and security features ensuring robust and secure enterprise data management.' },
-  { title: 'Microservice Development', desc: 'Full microservice development process encompassing design, implementation, testing, and ongoing maintenance.' },
-  { title: 'Outsourcing Solutions', desc: 'Enhance your business operations by leveraging our expertise while you focus on core activities with significant cost savings.' },
-  { title: 'Dedicated L1 Support', desc: 'Comprehensive 24/7 L1 Support designed to address your immediate needs and ensure uninterrupted business operations.' },
+  { icon: '☁️', title: 'Managed Cloud', desc: 'End-to-end cloud management across AWS, Azure, and GCP with 24/7 monitoring.', highlights: ['Multi-cloud architecture', 'Automated provisioning', 'FinOps cost governance', 'High availability'] },
+  { icon: '☸️', title: 'Container Orchestration', desc: 'Production Kubernetes with Docker, GitOps workflows, and automated scaling.', highlights: ['Self-healing clusters', 'Rolling updates', 'Service mesh', 'GitOps workflows'] },
+  { icon: '🗄️', title: 'Data Warehousing', desc: 'Modern data platforms with high-throughput ETL and enterprise governance.', highlights: ['Snowflake / BigQuery', 'Automated ETL', 'Data governance', 'Real-time analytics'] },
+  { icon: '🧩', title: 'Microservices', desc: 'Domain-driven microservice architecture with API gateways and observability.', highlights: ['Event-driven design', 'API gateway', 'Distributed tracing', 'Service mesh'] },
+  { icon: '👥', title: 'Staff Augmentation', desc: 'Senior engineers who integrate into your sprints and boost delivery velocity.', highlights: ['Cloud architects', 'DevOps engineers', 'Full-stack developers', 'Agile integration'] },
+  { icon: '🛡️', title: '24/7 L1 Support', desc: 'Continuous operations with proactive monitoring and automated remediation.', highlights: ['Sub-15min response', 'Incident management', 'Automated alerts', 'SLA-backed'] },
 ];
 
 // ── Products: Full Details ──
 export const productDetails = [
   {
     title: 'AI-Powered Container Platform (CaaS)',
-    desc: 'Experience the future of container management with CaaS, our fully managed GUI platform powered by AI. With advanced automation integration and easy monitoring, managing containers has never been smoother.',
-    features: ['Fully managed GUI platform', 'AI-powered automation', 'Easy monitoring dashboards', 'Advanced deployment tools'],
+    desc: 'Fully managed GUI platform powered by AI for seamless container orchestration, monitoring, and deployment automation.',
+    features: ['Fully managed GUI', 'AI-powered automation', 'Real-time monitoring', 'Advanced deployment tools', 'Auto-scaling policies'],
     gradient: 'from-blue-600 to-cyan-500',
   },
   {
-    title: 'Personalized Artificial Intelligence',
-    desc: 'Dedicated AI provides bespoke artificial intelligence solutions designed to meet the unique needs of your enterprise. By leveraging advanced AI technologies, we help you optimize operations and drive innovation.',
-    features: ['Custom AI models', 'Operations optimization', 'Decision enhancement', 'Competitive edge delivery'],
+    title: 'Enterprise AI Solutions',
+    desc: 'Bespoke AI solutions designed to optimize operations, enhance decision-making, and deliver competitive advantage.',
+    features: ['Custom AI models', 'Operations optimization', 'Predictive analytics', 'Decision enhancement', 'Seamless integration'],
     gradient: 'from-indigo-600 to-purple-500',
   },
 ];
 
-// ── Contact: Process Steps ──
+// ── Contact ──
 export const contactSteps = [
-  { title: "We'll prepare a proposal", desc: "Required scope, timeline, and approx. price will be included if you provide us with detailed information about your project." },
-  { title: 'Together we discuss it', desc: "Let's get acquainted and discuss all the possible variants and options." },
-  { title: "Let's start building", desc: 'Once the contract is signed, we immediately get to work.' },
+  { number: '1', title: "We'll prepare a proposal", desc: 'Scope, timeline, and pricing based on your project details.' },
+  { number: '2', title: 'We discuss together', desc: "Let's explore options and find the best approach for you." },
+  { number: '3', title: 'We start building', desc: 'Once agreed, we immediately get to work on your solution.' },
 ];
 
-// ── Contact: Process Guarantees ──
 export const processGuarantees = [
   'Proposal within 24 hours',
   'No hidden costs',
   'Dedicated project manager',
   'Flexible engagement models',
+  'Weekly progress reports',
+  'Post-delivery support',
 ];
 
-// ── Careers: Perks ──
+// ── Careers ──
 export const careerPerks = [
-  { icon: '🚀', title: 'Growth Opportunities', desc: 'Continuous learning and career advancement paths.' },
-  { icon: '🏠', title: 'Flexible Work', desc: 'Remote-friendly culture with flexible schedules.' },
-  { icon: '🎯', title: 'Impactful Projects', desc: 'Work on cutting-edge cloud, AI, and DevOps projects.' },
-  { icon: '👥', title: 'Great Team', desc: 'Collaborate with passionate, skilled professionals.' },
+  { icon: '🚀', title: 'Growth', desc: 'Continuous learning and career advancement.' },
+  { icon: '🏠', title: 'Flexibility', desc: 'Remote-friendly with flexible schedules.' },
+  { icon: '🎯', title: 'Impact', desc: 'Work on cutting-edge cloud and AI projects.' },
+  { icon: '👥', title: 'Team', desc: 'Collaborate with passionate professionals.' },
 ];
 
-// ── Footer: Sections ──
+// ── Footer ──
 export const footerSections = [
-  { title: 'About', items: [{ text: 'Empowering Businesses with Innovative IT Solutions' }] },
   { title: 'Company', items: [
     { text: 'About Us', url: '#/about' },
-    { text: 'Our Products', url: '#/products' },
-    { text: 'Contact Us', url: '#/contact' },
     { text: 'Careers', url: '#/careers' },
+    { text: 'Contact', url: '#/contact' },
   ]},
   { title: 'Services', items: [
-    { text: 'Managed Cloud Service', url: '#/services' },
-    { text: 'Container Orchestration', url: '#/services' },
+    { text: 'Cloud Infrastructure', url: '#/services' },
+    { text: 'Kubernetes', url: '#/services' },
     { text: 'Data Warehousing', url: '#/services' },
-    { text: 'Microservice Development', url: '#/services' },
-    { text: 'Outsourcing Solutions', url: '#/services' },
-    { text: '24/7 L1 Support', url: '#/services' },
+    { text: 'Microservices', url: '#/services' },
   ]},
   { title: 'Connect', items: [
     { text: 'LinkedIn', url: 'https://www.linkedin.com/company/ampharact/' },
@@ -143,7 +126,6 @@ export const footerSections = [
   ]},
 ];
 
-// ── Social Links (shared across footer + contact) ──
 export const socialLinks = {
   linkedin: 'https://www.linkedin.com/company/ampharact/',
   facebook: 'https://www.facebook.com/people/Ampharact-India-Private-limited/61554086129013/',
@@ -151,10 +133,18 @@ export const socialLinks = {
   youtube: 'https://www.youtube.com/@ampharact',
 };
 
-// ── Company Info ──
 export const companyInfo = {
   name: 'Ampharact (I) Private Limited',
   email: 'letstalk@ampharact.com',
-  tagline: 'Empowering businesses with innovative IT solutions.',
-  year: 2025,
+  tagline: 'Enterprise-grade managed IT services.',
 };
+
+// ── Tech Stack ──
+export const techStack = ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Docker', 'Terraform', 'Jenkins', 'Prometheus', 'Grafana', 'ArgoCD'];
+
+// ── Recognitions ──
+export const recognitions = [
+  { badge: '🇮🇳', title: 'Startup India Registered', content: 'Recognized by Startup India and Startup Tamil Nadu for innovation and growth.' },
+  { badge: '🏛️', title: 'DPIIT Recognised', content: 'Government recognition with tax benefits for investment and innovation.' },
+  { badge: '☁️', title: 'Azure Founders Hub', content: 'Microsoft Azure recognition for cloud innovation and business growth.' },
+];

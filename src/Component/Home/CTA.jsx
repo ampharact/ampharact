@@ -1,24 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const CTA = () => {
-  return (
-    <section className="py-6 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 md:p-12">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="text-center md:text-left mb-6 md:mb-0">
-              <h2 className="text-2xl md:text-3xl font-bold text-white">Let's Talk with Us</h2>
-              <p className="text-blue-100 mt-2">Ready to transform your IT operations?</p>
-            </div>
-            <Link to="/contact" className="px-8 py-3.5 bg-white text-blue-600 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-blue-50">
-              Contact Us
-            </Link>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+const CTA = () => (
+  <section className="bg-white py-24">
+    <div className="max-w-4xl mx-auto px-6 text-center">
+      <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Ready to get started?</h2>
+      <p className="text-gray-500 mb-8 max-w-lg mx-auto">Let's discuss how we can help you build reliable, scalable infrastructure.</p>
+      <Link to="/contact" className="inline-block px-8 py-4 bg-gray-900 text-white font-semibold rounded-xl hover:bg-gray-800 transition-colors">
+        Talk to us
+      </Link>
+    </div>
+  </section>
+);
 
 export default CTA;

@@ -1,28 +1,26 @@
 import React from 'react';
 
-/**
- * Reusable section wrapper with consistent padding, background, and centering.
- * @param {string} bg - Background class (default: 'bg-white')
- * @param {string} className - Additional classes
- * @param {boolean} centered - Whether to center the header text
- * @param {string} label - Small uppercase label above title
- * @param {string} title - Section title (h2)
- * @param {string} subtitle - Optional subtitle text
- */
-const SectionWrapper = ({ bg = 'bg-white', className = '', centered = false, label, title, subtitle, children }) => {
+const SectionWrapper = ({ bg = 'bg-white', className = '', centered = false, narrow = false, label, title, subtitle, id, accent = false, children }) => {
   return (
-    <section className={`${bg} py-20 ${className}`}>
-      <div className="max-w-7xl mx-auto px-6">
+    <section id={id} className={`${bg} py-24 lg:py-32 ${className}`}>
+      {accent && <div className="h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 w-full" />}
+      <div className={`${narrow ? 'max-w-5xl' : 'max-w-7xl'} mx-auto px-6`}>
         {(label || title || subtitle) && (
-          <div className={`mb-14 ${centered ? 'text-center' : ''}`}>
+          <div className={`mb-16 ${centered ? 'text-center' : ''}`}>
             {label && (
-              <h2 className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-3">{label}</h2>
+              <span className="inline-block px-4 py-1.5 text-xs font-bold text-blue-600 bg-blue-50 rounded-full uppercase tracking-widest mb-4">
+                {label}
+              </span>
             )}
             {title && (
-              <h3 className="text-3xl sm:text-4xl font-bold text-gray-900">{title}</h3>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
+                {title}
+              </h2>
             )}
             {subtitle && (
-              <p className="text-lg text-gray-600 mt-3 max-w-3xl">{subtitle}</p>
+              <p className={`text-lg text-gray-500 mt-4 max-w-3xl leading-relaxed ${centered ? 'mx-auto' : ''}`}>
+                {subtitle}
+              </p>
             )}
           </div>
         )}

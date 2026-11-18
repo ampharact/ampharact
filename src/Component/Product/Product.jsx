@@ -1,36 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../SEO';
-import { PageHero, SectionWrapper, FeatureList } from '../ui';
 import Footer from '../Home/Footer';
 import { productDetails } from '../../Content/content';
 
 export const Product = () => (
   <>
-    <SEO title="Products" description="Explore Ampharact products: AI-Powered Container Platform (CaaS) and Personalized AI solutions for enterprise." keywords="CaaS, container platform, AI solutions, enterprise AI, container management" />
+    <SEO title="Products" description="Ampharact products — AI-Powered Container Platform and Enterprise AI Solutions." keywords="CaaS, container platform, AI solutions, enterprise AI" />
 
-    <PageHero title="AI-Powered Solutions" subtitle="Experience the future of container management and enterprise optimization with our AI-powered solutions that deliver tangible results and a competitive edge." />
+    <section className="bg-gray-900 py-20 px-6">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight">Our Products</h1>
+        <p className="text-lg text-gray-400 mt-4 max-w-2xl">AI-powered platforms built for modern enterprise operations.</p>
+      </div>
+    </section>
 
-    <SectionWrapper>
-      <div className="space-y-12">
-        {productDetails.map((product, index) => (
-          <div key={index} className="bg-white rounded-3xl overflow-hidden shadow-card border border-gray-100">
-            <div className={`h-2 bg-gradient-to-r ${product.gradient}`}></div>
-            <div className="p-8 md:p-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{product.title}</h2>
-              <p className="text-gray-600 leading-relaxed mb-8 max-w-3xl">{product.desc}</p>
-              <div className="mb-8">
-                <FeatureList features={product.features} />
+    <section className="bg-white py-24 px-6">
+      <div className="max-w-4xl mx-auto space-y-10">
+        {productDetails.map((product, i) => (
+          <div key={i} className="border border-gray-100 rounded-2xl overflow-hidden">
+            <div className={`h-1 bg-gradient-to-r ${product.gradient}`} />
+            <div className="p-8 md:p-10">
+              <h2 className="text-2xl font-bold text-gray-900 mb-3">{product.title}</h2>
+              <p className="text-gray-500 leading-relaxed mb-6 max-w-2xl">{product.desc}</p>
+              <div className="flex flex-wrap gap-2 mb-8">
+                {product.features.map((f, fi) => (
+                  <span key={fi} className="text-xs text-gray-500 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-100">{f}</span>
+                ))}
               </div>
-              <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors">
-                Get Started
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+              <Link to="/contact" className="text-sm text-blue-600 font-semibold hover:text-blue-700">
+                Get started →
               </Link>
             </div>
           </div>
         ))}
       </div>
-    </SectionWrapper>
+    </section>
 
     <Footer />
   </>
